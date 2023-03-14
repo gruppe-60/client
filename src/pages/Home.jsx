@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
@@ -15,7 +15,7 @@ const Home = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (password === 12) {
-      setShowNavbar(true);
+      // setShowNavbar(true);
       navigate("/");
     } else {
       alert("! Access denied !");
