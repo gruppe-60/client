@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+// import Context from "../global/Context";
 
 
 const Home = () => {
   
+// const {showNavbar, setShowNavbar} = useContext(Context);
+// console.log(showNavbar)
 
   const navigate = useNavigate();
   const [password, setPassword] = useState();
@@ -16,7 +19,7 @@ const Home = () => {
     e.preventDefault();
     if (password === 12) {
       // setShowNavbar(true);
-      navigate("/");
+      navigate("/baskets");
     } else {
       alert("! Access denied !");
     }
