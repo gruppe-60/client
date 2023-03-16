@@ -4,7 +4,7 @@ import SingleBasket from "../pages/SingleBasket";
 import Register from "../pages/Register";
 
 
-import NotFound from "../pages/NotFound";
+import NotFound from "../pages/NotFound/NotFound";
 
 
 const routes = [
