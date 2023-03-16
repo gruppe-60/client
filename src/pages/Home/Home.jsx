@@ -9,19 +9,21 @@ const Home = () => {
 // const {showNavbar, setShowNavbar} = useContext(Context);
 // console.log(showNavbar)
 
-  const [password, setPassword] = useState();
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
 
-  const handleChange = (e) => {
-    setPassword(parseFloat(e.target.value));
-  };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-   const response = axios.post("http://localhost:4001/auth/login",{
+    try{
+   const response = await axios.post("http://localhost:4001/auth/login",{
     email,
     password
-  });
+  }, {withCredentials: true});
   console.log(response)
+}catch(error){
+  console.log(error)
+}
 }
 
   return (
@@ -32,11 +34,11 @@ const Home = () => {
       <form >
         <label>
           Email
-        <input type="email" name="email" />
+        <input type="email" name="email" onChange={(e)=>setEmail(e.target.value)}/>
         </label>
         <label>
           Password:
-          <input type="password" name="password" onChange={handleChange} />
+          <input type="password" name="password" onChange={(e)=>setPassword(e.target.value)} />
         </label>
         <button type="submit" onClick={handleSubmit}>
           Login
