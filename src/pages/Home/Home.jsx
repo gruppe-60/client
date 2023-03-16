@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import axios from "axios";
 // import Context from "../global/Context";
 import "./Home.css";
+import {useNavigate} from "react-router-dom";
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
 
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,6 +22,7 @@ const Home = () => {
     email,
     password
   }, {withCredentials: true});
+navigate("/basket")
   console.log(response)
 }catch(error){
   console.log(error)

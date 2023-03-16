@@ -20,7 +20,7 @@ setItems(data.data.oneList.items);
 
       const oneItemDelete =(itemId)=>{
 
-          axios.post(`http://localhost:4001/liste/${id}/${itemId}/delete`).then((data) => {
+          axios.post(`http://localhost:4001/liste/delete/${id}/${itemId}`).then((data) => {
             axios.get(`http://localhost:4001/liste/${id}`).then((data) => {
                 setItems(data.data.oneList.items);
                         }).catch((response)=>{
@@ -37,7 +37,7 @@ setItems(data.data.oneList.items);
   
       const handleSubmit =(event)=>{
         event.preventDefault()
-        axios.post(`http://localhost:4001/liste/${id}/item-create`,{name:newItem}).then((data) => {
+        axios.post(`http://localhost:4001/liste/item-create/${id}`,{name:newItem}).then((data) => {
           axios.get(`http://localhost:4001/liste/${id}`).then((data) => {
             setItems(data.data.oneList.items);
                     }).catch((response)=>{
