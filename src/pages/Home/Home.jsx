@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 // import Context from "../global/Context";
+import "./Home.css";
 
 
 const Home = () => {
@@ -27,7 +28,7 @@ const Home = () => {
 
   return (
     <>
-      <h1>Einkauf App</h1>
+      <h1>SHOPLIST</h1>
       {/* <img src= alt="" /> */}
       <h3>Login with Password</h3>
       <form >

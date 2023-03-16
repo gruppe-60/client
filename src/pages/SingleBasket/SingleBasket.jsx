@@ -1,4 +1,5 @@
-import  SingleBasket  from "../components/SingleBasket";
+import  SingleBasket  from "../../components/SingleBasket/SingleBasket";
+import "./SingleBasket.css";
 
 
 

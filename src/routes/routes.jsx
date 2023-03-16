@@ -1,9 +1,9 @@
-import Home from "../pages/Home";
-import BasketsPage from "../pages/Baskets";
-import SingleBasket from "../pages/SingleBasket";
+import Home from "../pages/Home/Home";
+import BasketsPage from "../pages/Baskets/Baskets";
+import SingleBasket from "../pages/SingleBasket/SingleBasket";
 
 
-import NotFound from "../pages/NotFound";
+import NotFound from "../pages/NotFound/NotFound";
 
 
 const routes = [

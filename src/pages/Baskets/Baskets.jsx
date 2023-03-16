@@ -1,5 +1,5 @@
-
-import  Baskets  from "../components/Baskets";
+import  Baskets  from "../../components/Baskets/Baskets";
+import "./Baskets.css";
 
 
 
