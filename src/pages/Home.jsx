@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import axios from "axios";
 // import Context from "../global/Context";
 
 
@@ -8,7 +8,6 @@ const Home = () => {
 // const {showNavbar, setShowNavbar} = useContext(Context);
 // console.log(showNavbar)
 
-  const navigate = useNavigate();
   const [password, setPassword] = useState();
 
   const handleChange = (e) => {
@@ -17,13 +16,12 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (password === 12) {
-      // setShowNavbar(true);
-      navigate("/baskets");
-    } else {
-      alert("! Access denied !");
-    }
-  };
+   const response = axios.post("http://localhost:4001/auth/login",{
+    email,
+    password
+  });
+  console.log(response)
+}
 
   return (
     <>
@@ -32,12 +30,18 @@ const Home = () => {
       <h3>Login with Password</h3>
       <form >
         <label>
+          Email
+        <input type="email" name="email" />
+        </label>
+        <label>
           Password:
           <input type="password" name="password" onChange={handleChange} />
         </label>
         <button type="submit" onClick={handleSubmit}>
           Login
         </button>
+        <br />
+        
       </form>
     </>
   );

@@ -1,6 +1,7 @@
 import Home from "../pages/Home";
 import BasketsPage from "../pages/Baskets";
 import SingleBasket from "../pages/SingleBasket";
+import Register from "../pages/Register";
 
 
 import NotFound from "../pages/NotFound";
@@ -9,8 +10,10 @@ import NotFound from "../pages/NotFound";
 const routes = [
     { path: "/", element: <Home />, id: 1 },
     { path: "/basket/:id", element:<SingleBasket/> , id: 2 },
-    { path: "/baskets", element:<BasketsPage/>, id: 3 },
+    { path: "/basket", element:<BasketsPage/>, id: 3 },
     { path: "/*", element: <NotFound />, id: 4 },
+    { path: "/register", element: <Register/>, id: 5 },
+
   ];
   
   export default routes;
