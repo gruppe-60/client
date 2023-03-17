@@ -8,9 +8,12 @@ const Baskets = () => {
   const [newListName, setNewListName]= useState("")
   const navigate = useNavigate();
 
+  useEffect(()=>{
+
+  }, [])
 
   const oneListDelete =(listId)=>{
-    axios.post(`http://localhost:4001/liste/${listId}/delete`).then((data) => {
+    axios.post(`http://localhost:4001/liste/delete/${listId}`, {}, {withCredentials: true}).then((data) => {
       console.log(data.data)
       axios.get("http://localhost:4001/liste/allListe").then((data) => {
         console.log(data.data.allListe)
