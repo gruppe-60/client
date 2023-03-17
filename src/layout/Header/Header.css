@@ -1,0 +1,36 @@
+.registerbutton {
+    background-color: aquamarine;
+    padding: 10px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.loginbutton {
+    background-color: coral;
+    padding: 10px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    background-color: cornflowerblue;
+
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container i {
+    
+    font-size: 5rem;
+    margin-right: 10px;
+}

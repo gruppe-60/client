@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <>
       
-        <nav>
+        <nav className="navi">
           <ul className="ul">
             {items.map((item) => {
               return (
