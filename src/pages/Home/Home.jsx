@@ -30,13 +30,14 @@ navigate("/basket")
 }
 
   return (
-    <>
-      <h1>SHOPLIST</h1>
+    <div className="homebody">
+      <h1>Welcome to</h1>
+      <h2>SHOPLIST</h2>
       {/* <img src= alt="" /> */}
-      <h3>Login with Password</h3>
+      <h3>Please Login</h3>
       <form >
         <label>
-          Email
+          Email:
         <input type="email" name="email" onChange={(e)=>setEmail(e.target.value)}/>
         </label>
         <label>
@@ -49,7 +50,7 @@ navigate("/basket")
         <br />
         
       </form>
-    </>
+    </div>
   );
 };
 

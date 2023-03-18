@@ -15,7 +15,6 @@ const Header = () => {
     <>
       <div className="header">
         <div className="logo-container">
-        <i className="fa-thin fa-basket-shopping"></i>
         <h1>SHOPLIST</h1>
         </div>
         {pathsWithNavbar.includes(location.pathname) &&
