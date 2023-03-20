@@ -1,27 +1,92 @@
+/*Style für den Main footer container*/
 .footer {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   border: solid;
-   width: 100%;
-   height: 150px;
-   position: fixed;
-   bottom: 0;
-   left: 0;
-   font-family: 'Italiana', serif;
- 
-
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 50px;
+  border: solid;
+  border-color: rgb(21, 192, 127);
+  font-family: 'Dosis', sans-serif;
 }
 
-.row{
-    display :flex;
-    justify-content:space-between;
-    color: white;
-    padding-top: 1em;
-    position: relative;
-    bottom: 0;
-    width: 100%; 
+/*main-footer container mit max-width und mittig anbringen*/
+.main-footer {
+  /*Max breite für den footer*/
+  max-width: 1200px;
+  /*hoizontal mittig anbringen */
+  margin: 0 auto;
+  /*relativ zum parent element anbringen*/
+  position: relative;
+  /*platz nach unten lassen*/
+  padding-bottom: 20px;
 }
-.col li{
-    list-style: none;
+
+/*flex-container für footer-reihen */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/*nach den flex elementen löschen*/
+.row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/*die zeilen stylen*/
+.col-md-4 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/*ab min 768 px mit media query ändern*/
+@media (min-width: 768px) {
+  .col-md-4 {
+    /*and die linke seite schieben*/
+    float: left;
+    /*nur ein drittel vom eltern-element einnehmen*/
+    width: 33.33%;
+  }
+}
+
+
+.one,
+.two,
+.three {
+  /*keinen style für die listen*/
+  list-style: none;
+  padding-left: 0;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/*den break stylen*/
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+/*element absolut positionieren*/
+.col-md-12 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }

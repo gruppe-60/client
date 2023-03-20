@@ -6,25 +6,60 @@
     border: solid;
     flex: 1;
     border-color: rgb(21, 192, 127);
-    height: 50vh;
-    font-family: 'Italiana', serif;
-
+    height: 40vh;
+    font-family: 'Dosis', sans-serif;
+    position: relative;
+    text-align: center;
 }
 
-form {
+h1 {
+    position: absolute;
+    top: 10%;
+}
+
+/*h2 {
+    position: absolute;
+    top: 20%;
+}*/
+
+h3 {
+    position: absolute;
+    top: 25%;
+}
+
+label.email-label input {
+    padding-right: 39%;
+}
+
+label.password-label input {
+    padding-right: 33%;
+}
+
+.loginfield {
+    width: 400px;
+    height: 230px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    // background-color: coral;
 }
 
 form label {
     margin: 10px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 button {
+    width: 100%;
     margin-top: 20px;
-}
-
-h1 {
-    font-family: 'Italiana', serif;
+    padding: 10px 20px;
 }

@@ -5,23 +5,22 @@ const Footer = () => {
 
     return (
         <div className="footer">
-            <h1>Footer</h1>
             <div className='main-footer'>
-                <div  >
                     <div className='row'>
                         {/*  spalte1 */}
-                        <div className='col'>
+                        <div className='col-md-4'>
                             <h4>SmartBuy GmbH</h4>
-                            <ul className=''>
-                                <li >030-123-456</li>
-                                <li >Berlin, Germany</li>
-                                <li >Kudamm 20, 10000 Berlin</li>
+                            <ul className='one'>
+                                <li>030-123-456</li>
+                                <li>Kudamm 20</li>
+                                <li>10000 Berlin</li>
+                                <li>Germany</li>
                             </ul>
                         </div>
                         {/* spalte2 */}
-                        <div className='col' >
+                        <div className='col-md-4' >
                             <h4>Teams</h4>
-                            <ul className=''>
+                            <ul className='two'>
                                 <li>Elham </li>
                                 <li>Eduard</li>
                                 <li>Sebastian</li>
@@ -29,9 +28,9 @@ const Footer = () => {
                             </ul>
                         </div>
                         {/*   spalte3 */}
-                        <div className='col' >
+                        <div className='col-md-4' >
                             <h4>About</h4>
-                            <ul className=''>
+                            <ul className='three'>
                                 <li>SmartBuy App</li>
                                 <li>Shopping list</li>
                                 <li>Einkaufsliste-App</li>
@@ -39,14 +38,13 @@ const Footer = () => {
                         </div>
                     </div>
                     <hr />
-                    <div className='row'>
-                        <p className='' >
+                    <div className='row2'>
+                        <p className='col-md-12' >
                             &copy;{new Date().getFullYear()} SmartBuy GmbH  |  All rights reserved | Terms of Service  | Privacy
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
     )
 
 }

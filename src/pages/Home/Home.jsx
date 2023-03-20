@@ -31,16 +31,16 @@ navigate("/basket")
 
   return (
     <div className="homebody">
-      <h1>Welcome to</h1>
-      <h2>SHOPLIST</h2>
+      <h1>Welcome</h1>
       {/* <img src= alt="" /> */}
       <h3>Please Login</h3>
-      <form >
-        <label>
+      <div className="login-wrapper">
+      <form className="loginfield">
+        <label className="email-label" >
           Email:
         <input type="email" name="email" onChange={(e)=>setEmail(e.target.value)}/>
         </label>
-        <label>
+        <label className="password-label" >
           Password:
           <input type="password" name="password" onChange={(e)=>setPassword(e.target.value)} />
         </label>
@@ -50,6 +50,7 @@ navigate("/basket")
         <br />
         
       </form>
+    </div>
     </div>
   );
 };
